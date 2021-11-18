@@ -28,6 +28,25 @@ export class UserService {
     return this.httpService.postService('user/login', data, false, options);
   }
 
+  encode(data:any) {
+    const formBody = [];
+    for (const property in data) {
+      const encodedKey = encodeURIComponent(property);
+      const encodedValue = encodeURIComponent(data[property]);
+      formBody.push(encodedKey + '=' + encodedValue);
+    }
+    return formBody.join('&');
+  }
+  resetPasswordForm(data: any,token:any) {
+    console.log("data is in user service",data);
+    let options = {
+      headers: new HttpHeaders({
+        'Authorization':token,
+        'Content-Type': 'application/x-www-form-urlencoded'
+      })
+    }
+    return this.httpService.postService('user/reset-password', this.encode(data), true, options);
+  }
 
 
 }
