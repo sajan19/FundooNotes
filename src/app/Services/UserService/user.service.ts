@@ -17,8 +17,19 @@ export class UserService {
       })
     }
     return this.httpService.postService('user/userSignUp', reqPayLoad, false, options);
-
   }
+  login(data: any) {
+    console.log("data is in user service",data);
+    let options = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+      })
+    }
+    return this.httpService.postService('user/login', data, false, options);
+  }
+
+
+
 }
 
 
