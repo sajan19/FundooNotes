@@ -1,1 +1,70 @@
-<p>registration works!</p>
+<div class="container" fxLayoutAlign="center center" fxFill>
+    <mat-card class="register-mat-card mat_card_box" fxFlex="55%">
+        <mat-card-header class="mat-card-header" fxLayout="column">
+            <mat-card-title class="mat-card-title">
+                <span style="color: rgba(34, 34, 216, 0.788);">F</span>
+                <span style="color: rgba(209, 12, 22, 0.788);">u</span>
+                <span style="color: rgba(216, 143, 34, 0.788);">n</span>
+                <span style="color: rgba(34, 34, 216, 0.788);">d</span>
+                <span style="color: rgba(34, 216, 49, 0.788);">o</span>
+                <span style="color: rgba(209, 12, 22, 0.788);">o</span>
+            </mat-card-title>
+            <div class="register-text">Create your Fundoo Account             
+            </div>
+        </mat-card-header>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit">
+            <div fxLayout="column wrap">
+                
+                <div class="name-field username" fxLayout="row" fxLayout.xs="column" fxLayoutGap="1%">
+                    <mat-form-field class="input_field" floatLabel="auto" appearance="outline">
+                        <mat-label>First Name</mat-label>
+                        <input matInput placeholder="First name" formControlName="first_name">
+                        
+                    </mat-form-field>
+
+                    <mat-form-field class="input_field" floatLabel="auto" appearance="outline">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput placeholder="Last name" formControlName="last_name">
+                        
+                    </mat-form-field>
+                </div>
+
+                <div class="email_field">
+                    <mat-form-field floatLabel="auto" appearance="outline" class="mat_email_field">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="Email" formControlName="email">
+                        <mat-hint class="hint_1">You can use letters, numbers & periods</mat-hint>
+                    </mat-form-field>
+                </div>
+                <div class="line">Use my current email address instead</div>
+                <div class="password_field" fxLayout="row" fxLayout.xs="column" fxLayoutGap="1%">
+                    <mat-form-field class="input_field"  floatLabel="auto" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="Password" formControlName="password">
+                       
+                    </mat-form-field>
+
+                    <mat-form-field class="input_field"  floatLabel="auto" appearance="outline">
+                        <mat-label>Confirm Password</mat-label>
+                        <input matInput placeholder="Password" formControlName="cpassword">
+                    </mat-form-field>
+                </div>
+                <mat-hint class="hint_2">Use 8 or more charachters with a mix of letters, numbers & symbols</mat-hint> 
+            </div>
+            <mat-checkbox class="checkbox">Show Password</mat-checkbox>
+            <mat-card-actions class="button">
+                <a class="line" routerLink='/login'> Sign in instead </a>
+        
+                <button (click)="onSubmit()" mat-raised-button class="mat-raised-button">Register</button>
+                </mat-card-actions>
+        
+                <div class="">
+                    <img class="image" src="../../../assets/account.svg" alt="" srcset="">
+                    <div class="line_1">One account. All of Fundoo</div>
+                    <div class="line_2">working for you.</div>
+                </div>
+        </form>
+        
+    </mat-card>
+
+</div>

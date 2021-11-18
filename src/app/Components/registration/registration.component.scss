@@ -1,0 +1,166 @@
+// .container{
+//     display: flex;
+//     height: 100vh;
+//   }
+//   .login-div{
+//     width: 450px;
+//     margin: 5rem;
+//   }
+//   .login-card{
+//     flex-direction: column;
+//     border: 1px rgba(20, 20, 20, 0.438) solid;
+//     border-radius: 10px;
+//   }
+
+//   .mat-card-header{
+//     flex-direction: column;
+//     align-items: center;
+//   }
+//   .text-login{
+//     font-size: 22px;
+//     margin-top: 3px;
+//     margin-bottom: -5px;
+//   }
+//   .mat-card-content{
+//     display: flex;
+//     flex-direction: column;
+//     margin-top: 10px;
+//     margin-left: 10px;
+//     margin-right: 10px;
+//   }
+//   .mat-card-actions{
+//     display: flex;
+//     justify-content: center;
+//   }
+//   .mat-raised-button{
+//     background-color: #1a73e8;
+//     color: white;
+//     padding-left:20px;
+//     padding-right: 20px;
+//     margin-right: 20px;
+//     font-size: 20px;
+//     border-radius: 5px;
+//     border: 1px solid #1a73e8;
+
+//   }
+//   .mat-card-footer{
+//     display: flex;
+//     justify-content: space-around;
+//     margin-bottom: 20px;
+//   }
+
+//   @media only screen and (max-width: 600px) {
+//     .login-div{
+//       width: 100%;
+//       margin: 0%;
+//     }
+//     .login-card{
+//       border: none;
+//       width: 100%;
+//       height: 90%;
+//       padding: 2%;
+//     }
+//   }
+//   @media only screen and (max-width: 425px) {
+
+//   }
+.mat_card_box {
+    height: 85vh;
+    width: 45vh;
+    border: 1px solid black;
+}
+.email_field {
+    width: 57%;
+}
+.image {
+    height: 244px;
+    width: 244px;
+    position: absolute;
+    top: 20%;
+    right: 3%;
+}
+.line_1 {
+    text-align: center;
+    position: absolute;
+    top: 60%;
+    right: 8%;
+    font-size: 16px;
+    // padding: 10px;
+    // background-color: cyan;
+}
+.line_2 {
+    text-align: center;
+    position: absolute;
+    top: 63%;
+    right: 12%;
+    font-size: 16px;
+    // padding: 10px;
+    // background-color: yellow;
+}
+.mat-raised-button {
+    background-color: #1a73e8;
+    color: white;
+    padding: 7px 15px;
+    position: relative;
+    left: 22%;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #1a73e8;
+}
+.mat-card-title{
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.register-text{
+    margin-top: 15px;
+    margin-left: 25px;
+    font-size: 20px;
+}
+.username{
+    margin-top: 25px;
+    margin-left: 25px;
+}
+.input_field{
+    width: 25%;
+    // height: 20px;
+}
+.email_field{
+    // margin-top: 25px;
+    margin-left: 25px;
+    // width: 100%;
+}
+.mat_email_field{
+    width: 86%
+}
+.line{
+    color: #1a73e8;
+    margin-left: 25px;
+    margin-top: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.password_field{
+    margin-left: 25px;
+    margin-top: 20px;
+}
+.hint_2{
+    margin-left: 37px;
+    width: 50%;
+    margin-top: -15px;
+    font-size: 13px;
+}
+.checkbox{
+    margin-top: 10px;
+    margin-left: 25px;
+}
+// .line_3{
+//     color: #1a73e8;
+//     margin-left: 25px;
+//     margin-top: 20px;
+//     font-weight: bold;
+//     text-decoration: none;
+// }
+.button{
+    margin-bottom: 25px;
+    margin-top: 20px;
+}
