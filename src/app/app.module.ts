@@ -15,6 +15,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
 import {FormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import {FormsModule} from '@angular/forms';
     FlexLayoutModule,
     ReactiveFormsModule,
     FormsModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
 
   ],
   providers: [],
