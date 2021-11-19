@@ -5,8 +5,10 @@ import { RegistrationComponent } from './Components/registration/registration.co
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
 
 const routes: Routes = [
-  {path:'login', component:LoginComponent},
+  
+  // { path: '', redirectTo: 'login', pathMatch: 'full' },
   {path:'registration', component:RegistrationComponent},
+  {path:'login', component:LoginComponent},
   {path:'reset-password', component:ResetPasswordComponent}
 ];
 

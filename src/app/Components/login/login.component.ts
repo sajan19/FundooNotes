@@ -40,19 +40,19 @@ export class LoginComponent implements OnInit {
       console.log("Data is in login",reqData);
       this.userService.login(reqData).subscribe((response:any)=>{
       console.log(response)
-      this._snackBar.open('please insert valid data', '',{
+      this._snackBar.open('Success!! Valid Data', '',{
         duration:2000,
       })
       },error =>{
         console.log(error); 
-        this._snackBar.open('please insert valid data', '',{
+        this._snackBar.open('Please insert valid data', '',{
           duration:2000,
         })
       })
       console.log("It is a valid data") 
     }
     else{
-      console.log("please insert valid data");
+      console.log("Please insert valid data");
     }
     if (this.loginForm.invalid) {
       return;

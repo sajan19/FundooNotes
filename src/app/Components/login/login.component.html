@@ -1,38 +1,66 @@
-<div fxlayout="row" fxLayoutAlign="center center" fxFlexFill>
-    <mat-card class="mat_card" fxFlex="27%">
-        <mat-card-header fxLayoutAlign="center center">
-            <mat-card-title  fxLayoutGap="20px" fxLayout="column">
-                <div fxLayoutAlign="center">
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="container" fxLayoutAlign="center center">
+        <mat-card class="mat_card" fxFlexFill fxFlex="33%">
+            <mat-card-header fxLayoutAlign="center center">
+                <mat-card-title fxLayoutGap="15px" fxLayout="column">
+                    <div fxLayoutAlign="center">
 
-                    <span style="color: rgba(34, 34, 216, 0.788);">F</span>
-                    <span style="color: rgba(209, 12, 22, 0.788);">u</span>
-                    <span style="color: rgba(216, 143, 34, 0.788);">n</span>
-                    <span style="color: rgba(34, 34, 216, 0.788);">d</span>
-                    <span style="color: rgba(34, 216, 49, 0.788);">o</span>
-                    <span style="color: rgba(209, 12, 22, 0.788);">o</span>
+                        <span style="color: rgba(34, 34, 216, 0.788);">F</span>
+                        <span style="color: rgba(209, 12, 22, 0.788);">u</span>
+                        <span style="color: rgba(216, 143, 34, 0.788);">n</span>
+                        <span style="color: rgba(34, 34, 216, 0.788);">d</span>
+                        <span style="color: rgba(34, 216, 49, 0.788);">o</span>
+                        <span style="color: rgba(209, 12, 22, 0.788);">o</span>
+
+                    </div>
+                    <div fxLayoutAlign="center" class="line_1">Sign in</div>
+                    <div class="line_2">Use your Fundoo Account</div>
+
+                </mat-card-title>
+            </mat-card-header>
+
+            <div class="form_field" fxLayout="column" fxLayoutGap="15px">
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email or phone</mat-label>
+                        <input matInput placeholder="email" formControlName="email" type="email" name="email">
+                        <mat-hint>Enter valid email</mat-hint>
+                        <!-- <mat-hint *ngIf="submitted && f.email.errors">
+                            <mat-hint *ngIf="f.email.errors.required" class="validation-alert">Enter valid email address</mat-hint> -->
+                        <!-- </mat-hint> -->
+                    </mat-form-field>
                     
+                <div>
+                    <a class="line" routerLink="/forgot-email">Forgot Email?</a>
                 </div>
-                <div fxLayoutAlign="center" class="line_1">Sign in</div>
-                <div class="line_2">Use your Fundoo Account</div>
-
-            </mat-card-title>
-        </mat-card-header>
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmit" fxLayout="column" fxLayoutGap="10px" >
-            <mat-form-field class="input_field" appearance="outline">
-                <mat-label>Email</mat-label>
-                <input matInput placeholder="Email" formControlName="email">
-                <mat-hint>Enter your email</mat-hint>
-              </mat-form-field>
-            <mat-form-field  class="input_field" appearance="outline">
-                <mat-label>Password</mat-label>
-                <input type="password" matInput placeholder="Password" formControlName="password">
-                <mat-hint>Enter your password</mat-hint>
-              </mat-form-field>
-              
-             
-            </form>
-            <div fxLayoutAlign="end" class="button">
-                <button mat-raised-button class="mat-raised-button" (click)="onSubmit()">Next</button>
+                <div>
+                    <mat-form-field appearance="outline" fxFlexFill>
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="password" formControlName="password" type="password"
+                            name="password">
+                        <mat-hint>Enter valid password</mat-hint>
+                        <!-- <mat-hint *ngIf="submitted && f.password.errors">
+                        <mat-hint *ngIf="f.password.errors.required" class="validation-alert">Password is required</mat-hint>
+                        <mat-hint *ngIf="f.password.errors.minlength" class="validation-alert">Password required 8 characters
+                        </mat-hint> -->
+                    <!-- </mat-hint> -->
+                    </mat-form-field>
+                    <a class="line" routerLink="/forgot-password">Forgot Password?</a>
+                </div>
+                <div>
+                    Not your computer? Use Guest mode to sign in privately.
+                    <a class="line" routerLink="">Learn more</a>
+                </div>
+                
+                <mat-card-actions fxLayoutAlign="space-between center" >
+                    <a class="line create" routerLink='/registration'> Create Account </a>
+            
+                    <button mat-raised-button class="mat-raised-button">Next</button>
+                    </mat-card-actions>
             </div>
-    </mat-card>
-</div>
+
+
+        </mat-card>
+    </div>
+
+</form>

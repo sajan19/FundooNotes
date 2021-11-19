@@ -36,8 +36,8 @@ export class RegistrationComponent implements OnInit {
       console.log(" Form is Valid. Go to Next Step.");
       let reqData = {
         service: this.registrationForm.value.service,
-        first_name: this.registrationForm.value.first_name,
-        last_name: this.registrationForm.value.last_name,
+        firstName: this.registrationForm.value.first_name,
+        lastName: this.registrationForm.value.last_name,
         email: this.registrationForm.value.email,
         password: this.registrationForm.value.password,
       }
@@ -54,5 +54,6 @@ export class RegistrationComponent implements OnInit {
   }
 
 }
+
 
 
