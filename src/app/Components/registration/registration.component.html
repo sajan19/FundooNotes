@@ -40,18 +40,25 @@
                 <div class="password_field" fxLayout="row" fxLayout.xs="column" fxLayoutGap="1%">
                     <mat-form-field class="input_field"  floatLabel="auto" appearance="outline">
                         <mat-label>Password</mat-label>
-                        <input matInput placeholder="Password" type="password" formControlName="password">
+                        <!-- <input matInput placeholder="Password" type="password" formControlName="password"> -->
+                        <input matInput [type]="hide?'password':'text'" placeholder="Password" formControlName="password">
                        
                     </mat-form-field>
 
                     <mat-form-field class="input_field"  floatLabel="auto" appearance="outline">
                         <mat-label>Confirm Password</mat-label>
-                        <input matInput placeholder="Password" type="password" formControlName="cpassword">
+                        <!-- <input matInput placeholder="Password" type="password" formControlName="cpassword"> -->
+                        <input  matInput [type]="hide?'password':'text'" placeholder="Password" formControlName="cpassword">
+                        <!-- <mat-hint *ngIf="submitted && f.confirmPassword.errors">
+                            <mat-hint *ngIf="f.confirmPassword.errors.required">Confirm Password required</mat-hint>
+                            <mat-hint *ngIf="f.confirmPassword.errors.MustMatch">Wrong Password
+                            </mat-hint>
+                        </mat-hint> -->
                     </mat-form-field>
                 </div>
                 <mat-hint class="hint_2">Use 8 or more charachters with a mix of letters, numbers & symbols</mat-hint> 
             </div>
-            <mat-checkbox class="checkbox">Show Password</mat-checkbox>
+            <mat-checkbox (click)="showPassword()" class="checkbox">Show Password</mat-checkbox>
             <mat-card-actions class="button">
                 <a class="line" routerLink='/login'> Sign in instead </a>
         

@@ -41,7 +41,7 @@ export class ResetPasswordComponent implements OnInit {
       console.log("It is a valid data")
      
     }else{
-      console.log("please insert valid data");
+      console.log("Please insert valid data");
     }
   }
 }
