@@ -28,6 +28,16 @@ export class UserService {
     return this.httpService.postService('user/login', data, false, options);
   }
 
+  forgotPasswordForm(data: any) {
+    console.log("data is in user service",data);
+    let options = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+      })
+    }
+    return this.httpService.postService('user/reset', data, false, options);
+  }
+
   encode(data:any) {
     const formBody = [];
     for (const property in data) {
