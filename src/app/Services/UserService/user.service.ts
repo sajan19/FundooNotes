@@ -6,8 +6,12 @@ import { HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class UserService {
-
-  constructor(private httpService: HttpService) { }
+  token: any
+  resetPasswordform: any;
+  forgotPasswordform: any;
+  constructor(private httpService: HttpService) {
+    this.token = localStorage.getItem('token')
+   }
 
   registration(reqPayLoad: any) {
     console.log("Data is in user service",reqPayLoad);
