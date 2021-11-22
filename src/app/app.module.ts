@@ -22,6 +22,7 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { TakeNoteComponent } from './Components/take-note/take-note.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     LoginComponent,
     ResetPasswordComponent,
     ForgotPasswordComponent,
-    DashboardComponent
+    DashboardComponent,
+    TakeNoteComponent
   ],
   imports: [
     BrowserModule,
