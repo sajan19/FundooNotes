@@ -18,6 +18,10 @@ import {FormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
 import { ForgotPasswordComponent } from './Components/forgot-password/forgot-password.component';
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 
 @NgModule({
@@ -26,7 +30,8 @@ import { ForgotPasswordComponent } from './Components/forgot-password/forgot-pas
     RegistrationComponent,
     LoginComponent,
     ResetPasswordComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +46,11 @@ import { ForgotPasswordComponent } from './Components/forgot-password/forgot-pas
     ReactiveFormsModule,
     FormsModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatSidenavModule
+    
 
   ],
   providers: [],

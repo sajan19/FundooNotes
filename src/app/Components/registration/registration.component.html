@@ -16,7 +16,7 @@
             <div fxLayout="column wrap">
 
                 <div class="name-field username" fxLayout="row" fxLayout.xs="column" fxLayoutGap="1%">
-                    <mat-form-field class="input_field" floatLabel="auto" appearance="outline">
+                    <mat-form-field class="input_field" floatLabel="auto" appearance="outline" style="width: 100%;">
                         <mat-label>First Name</mat-label>
                         <input matInput placeholder="First name" formControlName="first_name">
 
@@ -70,7 +70,7 @@
                 </mat-card-actions>
 
             </div>
-            <div class="">
+            <div class="" fxHide.lt-md>
                 <img class="image" src="../../../assets/account.svg" alt="" srcset="">
                 <div class="line_1">One account. All of Fundoo</div>
                 <div class="line_2">working for you.</div>
