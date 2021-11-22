@@ -12,18 +12,18 @@ export class TakeNoteComponent implements OnInit {
   ngOnInit(): void {
   }
   displayImage: any = true;
-  displayVideo_1: any = false;
-  displayVideo_2: any = false;
-  displayVideo_3: any = false;
+  displayNoteCard: any = false;
+ 
   
-  image1Click(){
+  matCardCLick(){
     this.displayImage = false;
-    this.displayVideo_1 = true;
+    this.displayNoteCard = true;
   }
   
-  closeVideo(){
+  closeMatCard_2(){
     this.displayImage = true;
-    this.displayVideo_1 = false;
+    this.displayNoteCard = false;
+    
   }
 
 }

@@ -23,6 +23,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { TakeNoteComponent } from './Components/take-note/take-note.component';
+import { IconsComponent } from './Components/icons/icons.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { TakeNoteComponent } from './Components/take-note/take-note.component';
     ResetPasswordComponent,
     ForgotPasswordComponent,
     DashboardComponent,
-    TakeNoteComponent
+    TakeNoteComponent,
+    IconsComponent
   ],
   imports: [
     BrowserModule,
