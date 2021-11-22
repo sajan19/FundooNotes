@@ -1,6 +1,6 @@
 <div class="take-notes-container" fxFlex="100%" fxLayoutAlign="center center">
-    <mat-card class="card" fxFlex="50%" fxLayout="row" fxLayoutAlign="space-between center">
-        <div class="text">Take a note...</div>
+    <mat-card class="mat_card_1" fxFlex="50%" fxLayout="row" fxLayoutAlign="space-between center">
+        <div (click)="image1Click()" class="text">Take a note...</div>
         <div>
            <button class="button-icon">
                <img src="../../../assets/take_note/tick_mark.svg" alt="">
@@ -14,3 +14,20 @@
         </div>
     </mat-card>
 </div> 
+
+<div *ngIf="displayVideo_1">
+        <mat-card class="mat_card_2" fxFlex="100%">
+            <div fxLayout="row"fxLayoutAlign="space-between center"  >
+                    <input class="input_field_1" type="text" placeholder="Title">
+                  <div> <button class="note_pin">
+                    <img src="../../../assets/take_note/note_pin.svg" alt="">
+                </button></div> 
+            </div>
+            <input class="input_field_1" type="text" placeholder="Take a note..."  fxLayout="row">
+           
+            <!-- <app-icons></app-icons> -->
+
+        </mat-card>
+       
+    <button (click)="closeVideo()" class="close_btn">Close</button>
+</div>
