@@ -1,0 +1,22 @@
+<mat-card class="mat_card">
+
+    <div class="" *ngFor="let card of cards">
+        <div> 
+            <button class="note_pin">
+                <img src="../../../assets/take_note/note_pin.svg" alt="">
+            </button>
+        </div>
+        <h4 class="card-title">{{card.title}}</h4>
+        <p class="card-text">{{card.description}}</p>
+    </div>
+
+
+    <!-- <div class="color">
+        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ad distinctio nihil,
+            ratione m dolor sit, amet consectetur adipisicing elit. Rem, blanditiis odit iure .</p>
+    <!-- </div> -->
+    <div>
+        <app-icons></app-icons>
+    </div>
+
+</mat-card>

@@ -24,6 +24,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { TakeNoteComponent } from './Components/take-note/take-note.component';
 import { IconsComponent } from './Components/icons/icons.component';
+import { DisplayCardComponent } from './Components/display-card/display-card.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { IconsComponent } from './Components/icons/icons.component';
     ForgotPasswordComponent,
     DashboardComponent,
     TakeNoteComponent,
-    IconsComponent
+    IconsComponent,
+    DisplayCardComponent
   ],
   imports: [
     BrowserModule,

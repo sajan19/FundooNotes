@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
+import { DisplayCardComponent } from './Components/display-card/display-card.component';
 import { ForgotPasswordComponent } from './Components/forgot-password/forgot-password.component';
 import { IconsComponent } from './Components/icons/icons.component';
 import { LoginComponent } from './Components/login/login.component';
@@ -19,9 +20,10 @@ const routes: Routes = [
   // {path:'reset-password', component:ResetPasswordComponent},
   {path:'forgot-password', component:ForgotPasswordComponent},
   {path:'home', component:DashboardComponent,
-  children:[{
-    path:'notes', component:TakeNoteComponent
-  }]
+  children:[
+    {path:'notes', component:TakeNoteComponent},
+    {path:'display-card', component:DisplayCardComponent},
+  ]
 }
 ];
 
