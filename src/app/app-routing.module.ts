@@ -17,6 +17,7 @@ const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'icons', component:IconsComponent},
   {path:'resetpassword/:token', component:ResetPasswordComponent},
+  {path:'display-card', component:DisplayCardComponent},
   // {path:'reset-password', component:ResetPasswordComponent},
   {path:'forgot-password', component:ForgotPasswordComponent},
   {path:'home', component:DashboardComponent,

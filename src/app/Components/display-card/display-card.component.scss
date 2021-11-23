@@ -1,24 +1,51 @@
-.color{
-    background-color: cyan;
-}
-.mat_card{
-    height: fit-content;
-    width: 250px;
-    position: relative;
-    top: 35%;
-    left: 10%;
+// .color{
+//     background-color: cyan;
+// }
+// .mat_card{
+//     height: fit-content;
+//     width: 250px;
+//     position: relative;
+//     top: 35%;
+//     left: 10%;
+// }
+// .note_pin {
+//     /* margin: -4px 10px; */
+//     border: none;
+//     background-color: white;
+//     position: absolute;
+//     top: 4px;
+//     right: 0px;
+// }
+
+// .para{
+//     padding: 10px;
+//     text-align: left;
+//     font-size: 15px;
+// }
+
+
+.content{
+    padding: 16px;
+    position: absolute;
+    top: 32%;
+    left:5%
 }
 .note_pin {
-    /* margin: -4px 10px; */
-    border: none;
-    background-color: white;
-    position: absolute;
-    top: 4px;
-    right: 0px;
+        /* margin: -4px 10px; */
+        border: none;
+        background-color: white;
+        position: absolute;
+        top: 4px;
+        right: 0px;
 }
-
+ .mat_card{
+        height: fit-content;
+        width: 250px;
+        // position: relative;
+        // top: 35%;
+        // left: 10%;
+}
 .para{
-    padding: 10px;
     text-align: left;
-    font-size: 15px;
+    padding: 5px;
 }

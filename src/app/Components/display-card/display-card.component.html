@@ -1,4 +1,5 @@
-<mat-card class="mat_card">
+<!-- <mat-card fxFlex=24% class="mat_card">
+<div  fxLayout ="row">
 
     <div class="" *ngFor="let card of cards">
         <div> 
@@ -9,14 +10,45 @@
         <h4 class="card-title">{{card.title}}</h4>
         <p class="card-text">{{card.description}}</p>
     </div>
+    
+</div>
 
-
-    <!-- <div class="color">
-        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ad distinctio nihil,
-            ratione m dolor sit, amet consectetur adipisicing elit. Rem, blanditiis odit iure .</p>
-    <!-- </div> -->
     <div>
         <app-icons></app-icons>
     </div>
 
 </mat-card>
+ -->
+
+
+ <!-- <mat-toolbar color="primary">
+     <span>Fundoo Notes</span>
+ </mat-toolbar> -->
+
+ <div class="content">
+     <div fxLayout="row wrap" fxLayoutGap="10px grid">
+        <!-- <div fxFlex="25%" *ngFor= "let num of [1,2,3,4,5]"> -->
+        <div fxFlex="25%" *ngFor= "let card of cards">
+            <mat-card class="mat_card">
+                <div> 
+                    <button class="note_pin">
+                        <img src="../../../assets/take_note/note_pin.svg" alt="">
+                    </button>
+                </div>
+                <mat-card-header>
+                    <mat-card-title>
+                      {{card.title}}
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content class="para">
+                    {{card.description}}
+                </mat-card-content>
+                <div>
+                    <app-icons></app-icons>
+                </div>            
+            </mat-card>
+        </div>
+     </div>
+    
+ </div>
+ 
