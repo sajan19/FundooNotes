@@ -40,6 +40,7 @@ export class LoginComponent implements OnInit {
       console.log("Data is in login",reqData);
       this.userService.login(reqData).subscribe((response:any)=>{
       console.log(response)
+      localStorage.setItem('token',response.id)
       this._snackBar.open('Success!! Valid Data', '',{
         duration:2000,
       })
