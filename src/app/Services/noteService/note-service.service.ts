@@ -21,5 +21,15 @@ token:any;
     }
     return this.httpService.postService('notes/addNotes', reqPayLoad, true, options);
   }
+
+  getAllNotesService(){
+    let options = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization':this.token
+      })
+    };
+    return this.httpService.getService('/notes/getNotesList',true, options);
+  }
   
 }

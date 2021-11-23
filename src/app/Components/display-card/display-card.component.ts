@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-display-card',
@@ -8,11 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class DisplayCardComponent implements OnInit {
   cards:any=Object;
   constructor() { }
-
+// @Input (property) DisplayCardComponent.NotesArrayList:any
+@Input() NotesArrayList:any
   ngOnInit(){
 
 
-  this.cards = [
+  // this.cards = [
+  this.NotesArrayList = [
     {title:"Welcome",
     description: "ipsum dolor, sit amet consectetur adipisicing elit. Quis provident esse et, animi nulla, recusandae"},
     {title:"Notebook",

@@ -25,6 +25,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { TakeNoteComponent } from './Components/take-note/take-note.component';
 import { IconsComponent } from './Components/icons/icons.component';
 import { DisplayCardComponent } from './Components/display-card/display-card.component';
+import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { DisplayCardComponent } from './Components/display-card/display-card.com
     DashboardComponent,
     TakeNoteComponent,
     IconsComponent,
-    DisplayCardComponent
+    DisplayCardComponent,
+    GetAllNotesComponent
   ],
   imports: [
     BrowserModule,

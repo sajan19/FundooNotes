@@ -26,7 +26,10 @@ export class TakeNoteComponent implements OnInit {
   }
   
   closeMatCard_2(){
-    let data={'title':'This is First Note', 'description':'This is First Note Description'}
+    let title:any
+    // let data={'title':'This is First Note', 'description':'This is First Note Description'}
+    let data={'title':'{{title}}', 'description':'{{description}}'}
+    // let data={'title':{{this.title}}, 'description':{{description}}}
     this.noteService.createNote(data).subscribe((respone:any) => {
       console.log(respone);
     },err => {console.log(err)} )
