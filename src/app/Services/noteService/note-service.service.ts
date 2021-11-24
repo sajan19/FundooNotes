@@ -33,4 +33,16 @@ token:any;
     return this.httpService.getService('notes/getNotesList',true, options);
   }
   
+  getReminderNotes(){
+    this.token=localStorage.getItem('token')
+    let options = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization':this.token
+      })
+    };
+    return this.httpService.getService('notes/getReminderNotesList',true, options);
+  }
+
+
 }

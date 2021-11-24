@@ -18,12 +18,12 @@
 <div *ngIf="displayNoteCard">
         <mat-card class="mat_card_2" fxFlex="100%">
             <div fxLayout="row"fxLayoutAlign="space-between center"  >
-                    <input class="input_field_1" type="text" placeholder="Title">
+                    <input class="input_field_1" type="text" placeholder="Title" [(ngModel)]='title'>
                   <div> <button class="note_pin">
                     <img src="../../../assets/take_note/note_pin.svg" alt="">
                 </button></div> 
             </div>
-            <input class="input_field_1" type="text" placeholder="Take a note..." fxLayout="row">
+            <input class="input_field_1" type="text" placeholder="Take a note..." fxLayout="row"  [(ngModel)]='description'>
            
             <app-icons></app-icons>
 

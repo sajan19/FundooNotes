@@ -26,6 +26,7 @@ import { TakeNoteComponent } from './Components/take-note/take-note.component';
 import { IconsComponent } from './Components/icons/icons.component';
 import { DisplayCardComponent } from './Components/display-card/display-card.component';
 import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.component';
+import { GetRemindersNoteComponent } from './Components/get-reminders-note/get-reminders-note.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.c
     TakeNoteComponent,
     IconsComponent,
     DisplayCardComponent,
-    GetAllNotesComponent
+    GetAllNotesComponent,
+    GetRemindersNoteComponent
   ],
   imports: [
     BrowserModule,
