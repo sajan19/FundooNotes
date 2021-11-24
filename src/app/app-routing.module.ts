@@ -4,6 +4,7 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { DisplayCardComponent } from './Components/display-card/display-card.component';
 import { ForgotPasswordComponent } from './Components/forgot-password/forgot-password.component';
 import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.component';
+import { GetRemindersNoteComponent } from './Components/get-reminders-note/get-reminders-note.component';
 import { IconsComponent } from './Components/icons/icons.component';
 import { LoginComponent } from './Components/login/login.component';
 import { RegistrationComponent } from './Components/registration/registration.component';
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path:'home', component:DashboardComponent,
   children:[
     {path:'notes', component:GetAllNotesComponent},
+    {path:'reminders', component:GetRemindersNoteComponent}
     // {path:'display-card', component:DisplayCardComponent},
   ]
 }

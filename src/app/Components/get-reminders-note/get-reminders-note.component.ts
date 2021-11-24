@@ -14,10 +14,12 @@ export class GetRemindersNoteComponent implements OnInit {
     this.getReminders()
   }
   getReminders(){
-    console.log("Get notes Calling");
+    console.log(" get Reminders Calling");
     this.noteService.getReminderNotes().subscribe((result:any) =>{
-      console.log(result.data.data);
+      console.log(result.data);
+      // console.log(result.data.data);
       this.NotesList=result.data.data  
+      // this.NotesList=result.data  
     },error=>{
       console.log(error);
     }) 
