@@ -9,13 +9,16 @@ import { UserService } from 'src/app/Services/UserService/user.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
+  user='1'
   loginForm !: FormGroup;
   submitted = false;
 
   constructor(private formBuilder: FormBuilder, private _snackBar:MatSnackBar, private userService: UserService) { }
 
   ngOnInit() {
+
+    localStorage.setItem('SessionUser',this.user)
+
     this.loginForm = this.formBuilder.group({
      
       email: ['', [Validators.required, Validators.email]],

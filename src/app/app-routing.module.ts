@@ -11,6 +11,7 @@ import { RegistrationComponent } from './Components/registration/registration.co
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
 import { TakeNoteComponent } from './Components/take-note/take-note.component';
 // import { TakeNoteComponent } from './Components/take-note/take-note.component';
+import { AuthenticationGuard } from './authentication.guard';
 
 const routes: Routes = [
   
@@ -22,7 +23,7 @@ const routes: Routes = [
   // {path:'display-card', component:DisplayCardComponent},
   // {path:'reset-password', component:ResetPasswordComponent},
   {path:'forgot-password', component:ForgotPasswordComponent},
-  {path:'home', component:DashboardComponent,
+  {path:'home', component:DashboardComponent,canActivate:[AuthenticationGuard],
   children:[
     {path:'notes', component:GetAllNotesComponent},
     {path:'reminders', component:GetRemindersNoteComponent}
