@@ -23,13 +23,14 @@ token:any;
   }
 
   getAllNotesService(){
+    this.token=localStorage.getItem('token')
     let options = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',
         'Authorization':this.token
       })
     };
-    return this.httpService.getService('/notes/getNotesList',true, options);
+    return this.httpService.getService('notes/getNotesList',true, options);
   }
   
 }

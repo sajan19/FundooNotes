@@ -15,7 +15,7 @@ export class HttpService {
   }
   getService(url = '', token: boolean = false, httpOptions: any = {}) {
     // console.log('Data in http service', reqPayLoad);
-    return this.httpClient.post(this.BaseUrl + url, token && httpOptions)
+    return this.httpClient.get(this.BaseUrl + url, token && httpOptions)
   }
   
 

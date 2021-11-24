@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NoteServiceService } from 'src/app/Services/noteService/note-service.service';
 
 @Component({
@@ -10,9 +10,11 @@ export class TakeNoteComponent implements OnInit {
 
   constructor(private noteService:NoteServiceService) { }
 
+  // @Input() title:any
+  // @Input() description:any
 
-
-
+title:any
+description:any
 
   ngOnInit(): void {
   }
@@ -26,10 +28,10 @@ export class TakeNoteComponent implements OnInit {
   }
   
   closeMatCard_2(){
-    let title:any
-    // let data={'title':'This is First Note', 'description':'This is First Note Description'}
-    let data={'title':'{{title}}', 'description':'{{description}}'}
-    // let data={'title':{{this.title}}, 'description':{{description}}}
+    // let title:any
+    let data={'title':'This is NEW Note', 'description':'This is First NEW Description'}
+    // let data={'title':'{{title}}', 'description':'{{description}}'}
+    // let data={'title':this.title, 'description':this.description}
     this.noteService.createNote(data).subscribe((respone:any) => {
       console.log(respone);
     },err => {console.log(err)} )

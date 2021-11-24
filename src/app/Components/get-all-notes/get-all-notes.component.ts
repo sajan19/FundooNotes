@@ -26,16 +26,15 @@ NotesList=[]
     
   // }
   getAllNotes(){
+    console.log("Get all notes Calling");
+    
     let notes = []
     // let item:any
     this.noteService.getAllNotesService().subscribe((response:any)=>{
-      console.log(response);
+      console.log('Message is present here',response);
       this.NotesList = response.data.data
-      notes = response.data.data
+      // notes = response.data.data
       
-      this.NotesList = notes.filter((item:any)=>{
-        return item.isDeleted !=true
-      })
       this.NotesList.reverse()
       console.log("notelist", this.NotesList);
       

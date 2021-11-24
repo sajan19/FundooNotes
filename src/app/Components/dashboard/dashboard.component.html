@@ -102,11 +102,12 @@
          
     </mat-sidenav>
 
-    <!-- <mat-sidenav-content fxLayout="column" fxFlex=100 fxLayoutAlign="center center" fxLayoutGap="30px">
-        <img src="../../../assets/side_nav/download.svg" alt="" class="centerIcon">
-        <p class="center-ref">Notes you add appear here</p>
-    </mat-sidenav-content> -->
-    <app-take-note></app-take-note>
-    <app-display-card></app-display-card>
+    <mat-sidenav-content fxLayout="column" fxFlex=100 fxLayoutAlign="center center" fxLayoutGap="30px">
+        <!-- <img src="../../../assets/side_nav/download.svg" alt="" class="centerIcon">
+        <p class="center-ref">Notes you add appear here</p> -->
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+    <!-- <app-take-note></app-take-note>
+    <app-display-card></app-display-card> -->
 </mat-sidenav-container>
 <!-- <app-take-note></app-take-note> -->
