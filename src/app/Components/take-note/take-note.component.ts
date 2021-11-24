@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NoteServiceService } from 'src/app/Services/noteService/note-service.service';
+import { Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-take-note',
@@ -12,7 +13,7 @@ export class TakeNoteComponent implements OnInit {
 
   // @Input() title:any
   // @Input() description:any
-
+  @Output() messageEvent = new EventEmitter<string>();
 title:any
 description:any
 
@@ -28,13 +29,12 @@ description:any
   }
   
   closeMatCard_2(){
-    // let title:any
-    // let data={'title':'This is NEW Note', 'description':'This is First NEW Description'}
     let data={'title':this.title, 'description':this.description}
     // let data={'title':'{{title}}', 'description':'{{description}}'}
     // let data={'title':this.title, 'description':this.description}
     this.noteService.createNote(data).subscribe((respone:any) => {
       console.log(respone);
+      this.messageEvent.emit(respone)
     },err => {console.log(err)} )
     this.displayImage = true;
     this.displayNoteCard = false;
