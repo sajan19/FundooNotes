@@ -13,7 +13,8 @@ export class UpdateNotesComponent implements OnInit {
   constructor(
     public dialogRef: MatDialogRef<UpdateNotesComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-  ) {console.log("Data is in update-note",data);
+  ) {
+    console.log("Data is in update-note",data);
       // this.title = data.title;
       // this.description = data.description;
   }
@@ -22,14 +23,6 @@ export class UpdateNotesComponent implements OnInit {
   onNoClick(): void {
     this.dialogRef.close();
   }
-  // constructor(
-  //   public dialogRef: MatDialogRef<UpdateNotesComponent>,
-  //   @Inject(MAT_DIALOG_DATA) public data: any) {
-
-  //     console.log("Data is in update-note",data);
-  //     this.title = data.title;
-  //     this.description = data.description;
-  //   }
     ngOnInit(): void {
     
     }

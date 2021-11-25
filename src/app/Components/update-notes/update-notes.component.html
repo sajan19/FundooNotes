@@ -9,10 +9,10 @@
     </div>
     <div fxLayout="column" fxLayoutGap="30px">
         <div>
-            <input class="title" type="text" [(ngModel)]="title" placeholder="Title">
+            <textarea class="title" type="text" matInput [(ngModel)]="title" placeholder="Title"></textarea>
         </div>
         <div>
-            <input class="description" type="text" [(ngModel)]="description" placeholder="Description">
+            <textarea matInput class="description" type="text" [(ngModel)]="description" placeholder="Description"></textarea>
         </div>
         <app-icons></app-icons>
        <!-- <div>

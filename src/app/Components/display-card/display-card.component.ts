@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import { UpdateNotesComponent } from '../update-notes/update-notes.component';
 
@@ -9,12 +9,15 @@ import { UpdateNotesComponent } from '../update-notes/update-notes.component';
 })
 export class DisplayCardComponent implements OnInit {
   cards:any=Object;
+  sentmsg:any;
  
   // @Input() childMessage: any;
   constructor(public dialog: MatDialog) {}
   // constructor() { }
 // @Input (property) DisplayCardComponent.NotesArrayList:any
+
 @Input() NotesArrayList:any
+@Output() displaytogetallnotes = new EventEmitter<string>();
   ngOnInit(){
 
   }
@@ -24,6 +27,13 @@ openDialog(note:any) {
     dialogRef.afterClosed().subscribe(result => {
       // console.log(`Dialog result: ${result}`);
     });
+  }
+
+  receiveMessageFromDeleteNote($event: any) {
+    console.log("recievedindisplay",$event);
+    this.sentmsg = $event
+    this.displaytogetallnotes.emit(this.sentmsg)
+
   }
 }
 
