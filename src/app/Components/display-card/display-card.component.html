@@ -11,11 +11,11 @@
                     </button>
                 </div>
                 <mat-card-header>
-                    <mat-card-title>
+                    <mat-card-title (click)="openDialog()">
                       {{note.title}}
                     </mat-card-title>
                 </mat-card-header>
-                <mat-card-content class="para">
+                <mat-card-content (click)="openDialog()" class="para">
                     {{note.description}}
                 </mat-card-content>
                 <div>

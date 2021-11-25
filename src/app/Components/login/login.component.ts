@@ -9,7 +9,7 @@ import { UserService } from 'src/app/Services/UserService/user.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  user='1'
+  // user='1'
   loginForm !: FormGroup;
   submitted = false;
 
@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
 
-    localStorage.setItem('SessionUser',this.user)
+    // localStorage.setItem('SessionUser',this.user)
 
     this.loginForm = this.formBuilder.group({
      

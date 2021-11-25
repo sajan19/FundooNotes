@@ -28,6 +28,7 @@ import { DisplayCardComponent } from './Components/display-card/display-card.com
 import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.component';
 import { GetRemindersNoteComponent } from './Components/get-reminders-note/get-reminders-note.component';
 import { AuthguardServiceService } from './authguard-service.service';
+import { UpdateNotesComponent } from './Components/update-notes/update-notes.component';
 // import[AuthguardServiceService]
 
 
@@ -43,7 +44,8 @@ import { AuthguardServiceService } from './authguard-service.service';
     IconsComponent,
     DisplayCardComponent,
     GetAllNotesComponent,
-    GetRemindersNoteComponent
+    GetRemindersNoteComponent,
+    UpdateNotesComponent
   ],
   imports: [
     BrowserModule,

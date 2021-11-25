@@ -1,4 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { UpdateNotesComponent } from '../update-notes/update-notes.component';
+// import {Component, Inject} from '@angular/core';
+// import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-display-card',
@@ -7,9 +11,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class DisplayCardComponent implements OnInit {
   cards:any=Object;
+  // dialog: any;
+  note:any
  
   // @Input() childMessage: any;
-  constructor() { }
+  // constructor() { }
 // @Input (property) DisplayCardComponent.NotesArrayList:any
 @Input() NotesArrayList:any
   ngOnInit(){
@@ -36,4 +42,31 @@ export class DisplayCardComponent implements OnInit {
   // ]
 
 }
+
+// openDialog(note:any){
+//   const dialogRef = this.dialog.open(UpdateNotesComponent,{
+//     width:"600px",
+//     data:note
+//   });
+//   dialogRef.afterClosed().subscribe((result:any) => {
+//     console.log('Dialog result: $(result)');
+    
+//   })
+// }
+
+constructor(public dialog: MatDialog) {}
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(UpdateNotesComponent, {
+      width: '600px',
+      data: this.note
+    });
+
+    dialogRef.afterClosed().subscribe((result:any) => {
+      console.log('Dialog result: $(result)');
+      // console.log('The dialog was closed');
+      // this.animal = result;
+    });
+  }
+
 }
