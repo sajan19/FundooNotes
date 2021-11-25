@@ -13,6 +13,7 @@ import { TakeNoteComponent } from './Components/take-note/take-note.component';
 import { UpdateNotesComponent } from './Components/update-notes/update-notes.component';
 // import { TakeNoteComponent } from './Components/take-note/take-note.component';
 import { AuthenticationGuard } from './authentication.guard';
+import { ArchiveComponent } from './Components/archive/archive.component';
 
 const routes: Routes = [
   
@@ -29,7 +30,8 @@ const routes: Routes = [
   {path:'home', component:DashboardComponent,canActivate:[AuthenticationGuard],
   children:[
     {path:'notes', component:GetAllNotesComponent},
-    {path:'reminders', component:GetRemindersNoteComponent}
+    {path:'reminders', component:GetRemindersNoteComponent},
+    {path:'archive', component:ArchiveComponent}
     // {path:'display-card', component:DisplayCardComponent},
   ]
 }

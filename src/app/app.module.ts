@@ -32,6 +32,7 @@ import { UpdateNotesComponent } from './Components/update-notes/update-notes.com
 // import[AuthguardServiceService]
 // import { UpdateNotesComponent } from './Components/update-notes/update-notes.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { ArchiveComponent } from './Components/archive/archive.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     DisplayCardComponent,
     GetAllNotesComponent,
     GetRemindersNoteComponent,
-    UpdateNotesComponent
+    UpdateNotesComponent,
+    ArchiveComponent
   ],
   imports: [
     BrowserModule,

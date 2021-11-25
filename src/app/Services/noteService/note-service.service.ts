@@ -57,4 +57,32 @@ token:any;
   }
 
 
+
+  getArchiveNoteService(data:any){
+    this.token=localStorage.getItem('token')
+    let options = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization':this.token
+      })
+    };
+    return this.httpService.getService('notes/getArchiveNotesList',true, options);
+  }
+
+   //to move to archive
+   archivedService(reqPayload: any) {
+    this.token=localStorage.getItem('token')
+    console.log("Notes moved to Archived", reqPayload);
+
+    let options = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': this.token
+      })
+
+    }
+    return this.httpService.postService('notes/archiveNotes', reqPayload, true, options)
+  }
+
+
 }
