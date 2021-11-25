@@ -1,0 +1,75 @@
+// .content{
+//     padding: 16px;
+//     position: absolute;
+//     top: 32%;
+//     left:5%
+// }
+// .note_pin {
+//         /* margin: -4px 10px; */
+//         border: none;
+//         background-color: white;
+//         position: absolute;
+//         top: 4px;
+//         right: 0px;
+// }
+//  .mat_card{
+//         height: 200px;
+//         width: 250px;
+//         // position: relative;
+//         // top: 35%;
+//         // left: 10%;
+// }
+// .para{
+//     text-align: left;
+//     padding: 5px;
+// }
+
+.update_container{
+    width: 500px;
+    position: relative;
+}
+.note_pin {
+    /* margin: -4px 10px; */
+    border: none;
+    background-color: white;
+    position: absolute;
+    top: 4px;
+    right: 0px;
+}
+
+.title{
+   border: none;
+   outline: none;
+   font-size: 20px;
+}
+
+.description{
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.icon{
+    position: relative;
+    right: 4px;
+    top: 22px;
+}
+
+.close{
+    position: relative;
+    left: 87%;
+    top: -7px;
+    background-color: white;
+    border: none;
+    font-size: 15px;
+}
+
+.close_button{
+    top: 79%;
+    position: absolute;
+    right: 0%;
+    background: none;
+    border: none;
+    font-size: 20px;
+
+}

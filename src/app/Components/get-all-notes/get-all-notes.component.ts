@@ -30,7 +30,7 @@ NotesList=[]
     let notes = []
     // let item:any
     this.noteService.getAllNotesService().subscribe((response:any)=>{
-      console.log('Message is present here',response);
+      console.log('Message is present in getAllNotes',response);
       this.NotesList = response.data.data
       // notes = response.data.data
       this.NotesList.reverse()
@@ -40,7 +40,12 @@ NotesList=[]
     })
   }
   receiveMessage($event: any) {
-    console.log($event);
+    console.log("Notes get Added and AutoRefresh",$event);
+    this.getAllNotes()
+  }
+
+  receiveMessageFromDeleteNote($event: any) {
+    console.log("Notes get deleted and AutoRefresh",$event);
     this.getAllNotes()
   }
 

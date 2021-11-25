@@ -30,6 +30,8 @@ import { GetRemindersNoteComponent } from './Components/get-reminders-note/get-r
 import { AuthguardServiceService } from './authguard-service.service';
 import { UpdateNotesComponent } from './Components/update-notes/update-notes.component';
 // import[AuthguardServiceService]
+// import { UpdateNotesComponent } from './Components/update-notes/update-notes.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -63,7 +65,8 @@ import { UpdateNotesComponent } from './Components/update-notes/update-notes.com
     HttpClientModule,
     MatMenuModule,
     MatToolbarModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatDialogModule
     
 
   ],

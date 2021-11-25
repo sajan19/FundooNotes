@@ -19,5 +19,6 @@ export class DashboardComponent implements OnInit {
   openDashboard(){
     this.openDash =  !this.openDash;
   }
+  
 
 }

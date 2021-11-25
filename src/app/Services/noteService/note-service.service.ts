@@ -45,4 +45,16 @@ token:any;
   }
 
 
+  deleteNoteService(data:any){
+    this.token=localStorage.getItem('token')
+    let options = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization':this.token
+      })
+    };
+    return this.httpService.postService('notes/deleteForeverNotes',data,true, options);
+  }
+
+
 }

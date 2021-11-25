@@ -10,6 +10,7 @@ import { LoginComponent } from './Components/login/login.component';
 import { RegistrationComponent } from './Components/registration/registration.component';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
 import { TakeNoteComponent } from './Components/take-note/take-note.component';
+import { UpdateNotesComponent } from './Components/update-notes/update-notes.component';
 // import { TakeNoteComponent } from './Components/take-note/take-note.component';
 import { AuthenticationGuard } from './authentication.guard';
 
@@ -23,6 +24,8 @@ const routes: Routes = [
   // {path:'display-card', component:DisplayCardComponent},
   // {path:'reset-password', component:ResetPasswordComponent},
   {path:'forgot-password', component:ForgotPasswordComponent},
+  // {path:'home', component:DashboardComponent,canActivate:[AuthenticationGuard],
+  {path:'updateNotes', component:UpdateNotesComponent},
   {path:'home', component:DashboardComponent,canActivate:[AuthenticationGuard],
   children:[
     {path:'notes', component:GetAllNotesComponent},

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { NoteServiceService } from 'src/app/Services/noteService/note-service.service';
 
 @Component({
   selector: 'app-icons',
@@ -6,22 +7,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./icons.component.scss']
 })
 export class IconsComponent implements OnInit {
-
-  constructor() { }
+  @Input() noteCard: any
+  @Output() iconstodisplay = new EventEmitter<string>();
+  constructor(private NoteServiceService: NoteServiceService) { }
 
   ngOnInit(): void {
   }
-  // displayMatCard_1: any = true;
-  // displayMatCard_2: any = true;
-  
-  
-  // image1Click(){
-  //   this.displayMatCard_1 = false;
-  //   this.displayMatCard_2 = true;
-  // }
-  
-  // closeMatCard(){
-  //   this.displayMatCard_1 = false;
-  //   this.displayMatCard_2 = false;
-  // }
-}
+ deleteNote(){
+    console.log("Note will be deleted",this.noteCard);
+    
+      let req = {
+      noteIdList: [this.noteCard.id],
+      isDeleted: false,
+    }
+    this.NoteServiceService.deleteNoteService(req).subscribe((response: any) =>{
+      console.log(response);
+
+      this.iconstodisplay.emit(response)
+      
+    },error =>{
+      console.log(error); 
+    })
+   }
+ }
+ 
