@@ -11,15 +11,16 @@
                     </button>
                 </div>
                 <mat-card-header>
-                    <mat-card-title>
+                    <mat-card-title (click)="openDialog(note)">
                       {{note.title}}
                     </mat-card-title>
                 </mat-card-header>
-                <mat-card-content class="para">
+                <mat-card-content (click)="openDialog(note)" class="para">
                     {{note.description}}
                 </mat-card-content>
                 <div>
-                    <app-icons></app-icons>
+                    <div>{{note.id}}</div>
+                    <app-icons [noteCard]='note'></app-icons>
                 </div>            
             </mat-card>
         </div>

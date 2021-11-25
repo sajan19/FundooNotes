@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
+import { UpdateNotesComponent } from '../update-notes/update-notes.component';
 
 @Component({
   selector: 'app-display-card',
@@ -9,31 +11,20 @@ export class DisplayCardComponent implements OnInit {
   cards:any=Object;
  
   // @Input() childMessage: any;
-  constructor() { }
+  constructor(public dialog: MatDialog) {}
+  // constructor() { }
 // @Input (property) DisplayCardComponent.NotesArrayList:any
 @Input() NotesArrayList:any
   ngOnInit(){
+
+  }
+openDialog(note:any) {
+    const dialogRef = this.dialog.open(UpdateNotesComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      // console.log(`Dialog result: ${result}`);
+    });
+  }
+}
+
   
-
-  // this.cards = [
-  // this.NotesArrayList = [
-  //   {title:"Welcome",
-  //   description: "ipsum dolor, sit amet consectetur adipisicing elit. Quis provident esse et, animi nulla, recusandae"},
-  //   {title:"Notebook",
-  //   description: "consectetur elit. Quis provident esse et, animi um qun"},
-  //   {title:"Browser",
-  //   description: "lor, sit amet consectetur adipisicing elit. Quis provident esse et, animi nulla, recusandae praesentium"},
-  //   {title:"Google",
-  //   description: "ipsum dolor, sit cing elit. Quis provident esse et, animi nulla, recusandae praesentium quway Station"},
-  //   {title:"NotesApp",
-  //   description: "Sipsum dolor, sit a recusandae praesentium quStation"},
-  //   {title:"Cricket",
-  //   description: "Sipsum dolor, sit a recusandae praesentium quStation"},
-  //   {title:"Angular",
-  //   description: "Sipsum dolor, sit a recusandae praesentium quStation"},
-  //   {title:"Notes",
-  //   description: "Sipsum dolor, sit a recusandae praesentium quStation"},
-  // ]
-
-}
-}

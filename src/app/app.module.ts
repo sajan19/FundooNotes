@@ -27,6 +27,8 @@ import { IconsComponent } from './Components/icons/icons.component';
 import { DisplayCardComponent } from './Components/display-card/display-card.component';
 import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.component';
 import { GetRemindersNoteComponent } from './Components/get-reminders-note/get-reminders-note.component';
+import { UpdateNotesComponent } from './Components/update-notes/update-notes.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -41,7 +43,8 @@ import { GetRemindersNoteComponent } from './Components/get-reminders-note/get-r
     IconsComponent,
     DisplayCardComponent,
     GetAllNotesComponent,
-    GetRemindersNoteComponent
+    GetRemindersNoteComponent,
+    UpdateNotesComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +62,8 @@ import { GetRemindersNoteComponent } from './Components/get-reminders-note/get-r
     HttpClientModule,
     MatMenuModule,
     MatToolbarModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatDialogModule
     
 
   ],
