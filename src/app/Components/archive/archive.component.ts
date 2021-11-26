@@ -7,21 +7,25 @@ import { NoteServiceService } from 'src/app/Services/noteService/note-service.se
   styleUrls: ['./archive.component.scss']
 })
 export class ArchiveComponent implements OnInit {
+  // note:any;
+  id:any;
   @Input() noteCard: any
   NotesList:any
   constructor(private NoteServiceService: NoteServiceService) { }
 
   ngOnInit(): void {
-    // this.archiveNote();
+    this.archiveNote();
   }
   archiveNote(){
+    
     console.log("Note is archive",this.noteCard);
     let req = {
       noteIdList: [this.noteCard.id],
       isArchived: true,
     }
     this.NoteServiceService.getArchiveNoteService(req).subscribe((response: any) =>{
-      console.log(response);
+      console.log("Getting note Archive",response);
+      this.NotesList=response.data.data;
       // this.iconstodisplay.emit(response)
     },error =>{
       console.log(error); 

@@ -10,7 +10,7 @@ import { UpdateNotesComponent } from '../update-notes/update-notes.component';
 export class DisplayCardComponent implements OnInit {
   cards:any=Object;
   sentmsg:any;
-  note: any;
+  
  
   // @Input() childMessage: any;
   constructor(public dialog: MatDialog) {}
@@ -22,15 +22,27 @@ export class DisplayCardComponent implements OnInit {
   ngOnInit(){
 
   }
+  // const dialogRef = this.dialog.open(UpdateNotesComponent, {
+  //   width: '250px',
+  //   data: {name: this.name, animal: this.animal},
+  // });
 openDialog(note:any) {
-    const dialogRef = this.dialog.open(UpdateNotesComponent);{
-      data: this.note
+    const dialogRef = this.dialog.open(UpdateNotesComponent,{
+      data: note
+      
     }
+    );
 
-    dialogRef.afterClosed().subscribe(result => {
-      // console.log(`Dialog result: ${result}`);
-    });
-  }
+  //   dialogRef.afterClosed().subscribe(result => {
+  //     // console.log(`Dialog result: ${result}`);
+  //   });
+  // }
+  dialogRef.afterClosed().subscribe(result => {
+    this.displaytogetallnotes.emit(this.sentmsg)
+    console.log(`Dialog result: ${result}`);
+
+  });
+}
 
   receiveMessageFromDeleteNote($event: any) {
     console.log("recievedindisplay",$event);

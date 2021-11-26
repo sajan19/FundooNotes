@@ -83,6 +83,20 @@ token:any;
     }
     return this.httpService.postService('notes/archiveNotes', reqPayload, true, options)
   }
+   
+  //to update notes
+   updateNoteService(reqPayload: any) {
+    this.token=localStorage.getItem('token')
+    console.log("Notes Updated", reqPayload);
 
+    let options = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': this.token
+      })
+
+    }
+    return this.httpService.postService('notes/updateNotes', reqPayload, true, options)
+  }
 
 }
