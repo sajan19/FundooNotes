@@ -9,7 +9,7 @@ import { DataServiceService } from 'src/app/Services/DataService/data-service.se
 })
 export class GetAllNotesComponent implements OnInit {
   parentMessage = "message from parent"
-NotesList:any
+Noteslist:any
   constructor(private noteService: NoteServiceService) { }
   // Notelist: any;
   // NotesList:any;
@@ -31,14 +31,14 @@ NotesList:any
     // let item:any
     this.noteService.getAllNotesService().subscribe((response:any)=>{
       console.log('Message is present in getAllNotes',response);
-      this.NotesList = response.data.data.reverse()
-      console.log("NoteList", this.NotesList);
+      this.Noteslist = response.data.data.reverse()
+      console.log("NoteList", this.Noteslist);
       // this.NotesList=this.NotesList.filter((noteData:any)=>{
       //   return noteData.isDeleted === true && noteData.isArchive === false;
       //  });
       // notes = response.data.data
       // this.NotesList.reverse()
-      console.log("NoteList", this.NotesList);
+      // console.log("NoteList", this.NotesList);
     },err => {
       console.log(err)    
     })

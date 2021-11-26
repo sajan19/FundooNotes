@@ -8,7 +8,7 @@ import { NoteServiceService } from 'src/app/Services/noteService/note-service.se
 })
 export class TrashComponent implements OnInit {
   // NotesList=[]
-  NotesList:any=[];
+  Noteslist:any=[];
 
   constructor(private NoteServiceService: NoteServiceService) { }
 
@@ -18,11 +18,11 @@ export class TrashComponent implements OnInit {
   getTrash() {
     this.NoteServiceService.getTrashService().subscribe((result: any) => {
       console.log("ongettrash", result);
-      this.NotesList = result.data.data.reverse()
-      this.NotesList=this.NotesList.filter((noteData:any)=>{
+      this.Noteslist = result.data.data.reverse()
+      this.Noteslist=this.Noteslist.filter((noteData:any)=>{
         return noteData.isDeleted === true;
        });
-      console.log('trashlist is in trash-note',this.NotesList);
+      console.log('trashlist is in trash-note',this.Noteslist);
     })
       
     // }, error => {

@@ -10,7 +10,7 @@ export class ArchiveComponent implements OnInit {
   // note:any;
   id:any;
   @Input() noteCard: any
-  NotesList:any
+  Noteslist:any
   constructor(private NoteServiceService: NoteServiceService) { }
 
   ngOnInit(): void {
@@ -26,11 +26,11 @@ export class ArchiveComponent implements OnInit {
     this.NoteServiceService.getArchiveNoteService().subscribe((response: any) =>{
       console.log("Getting note Archive",response);
       
-      this.NotesList = response.data.data.reverse()
-      this.NotesList=this.NotesList.filter((noteData:any)=>{
-        return noteData.isDeleted === true;
+      this.Noteslist = response.data.data.reverse()
+      // this.Noteslist=this.Noteslist.filter((noteData:any)=>{
+        // return noteData.isDeleted === true;
       // this.iconstodisplay.emit(response)
-      })
+      // })
     },error =>{
       console.log(error); 
     })
