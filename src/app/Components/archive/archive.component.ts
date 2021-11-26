@@ -18,18 +18,26 @@ export class ArchiveComponent implements OnInit {
   }
   archiveNote(){
     
-    console.log("Note is archive",this.noteCard);
-    let req = {
-      noteIdList: [this.noteCard.id],
-      isArchived: true,
-    }
-    this.NoteServiceService.getArchiveNoteService(req).subscribe((response: any) =>{
+    // console.log("Note is archive",this.noteCard);
+    // let req = {
+    //   noteIdList: [this.noteCard.id],
+    //   isArchived: true,
+    // }
+    this.NoteServiceService.getArchiveNoteService().subscribe((response: any) =>{
       console.log("Getting note Archive",response);
-      this.NotesList=response.data.data;
+      
+      this.NotesList = response.data.data.reverse()
+      this.NotesList=this.NotesList.filter((noteData:any)=>{
+        return noteData.isDeleted === true;
       // this.iconstodisplay.emit(response)
+      })
     },error =>{
       console.log(error); 
     })
    }
 
-}
+   receiveMessageFromDeleteNote($event: any) {
+    console.log("Notes get deleted and AutoRefresh",$event);
+    this.archiveNote()
+   }
+  }

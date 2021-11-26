@@ -33,6 +33,7 @@ import { UpdateNotesComponent } from './Components/update-notes/update-notes.com
 // import { UpdateNotesComponent } from './Components/update-notes/update-notes.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ArchiveComponent } from './Components/archive/archive.component';
+import { TrashComponent } from './Components/trash/trash.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { ArchiveComponent } from './Components/archive/archive.component';
     GetAllNotesComponent,
     GetRemindersNoteComponent,
     UpdateNotesComponent,
-    ArchiveComponent
+    ArchiveComponent,
+    TrashComponent
   ],
   imports: [
     BrowserModule,

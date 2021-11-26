@@ -58,7 +58,7 @@ token:any;
 
 
 
-  getArchiveNoteService(data:any){
+  getArchiveNoteService(){
     this.token=localStorage.getItem('token')
     let options = {
       headers: new HttpHeaders({
@@ -97,6 +97,33 @@ token:any;
 
     }
     return this.httpService.postService('notes/updateNotes', reqPayload, true, options)
+  }
+
+   //to move to trash
+   trashNoteService(reqPayload: any) {
+    console.log("in trashnoteservice", reqPayload);
+
+    let httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': this.token
+      })
+
+    }
+    console.log("Post Service data",reqPayload);
+    
+    return this.httpService.postService('notes/trashNotes', reqPayload, true, httpOptions)
+  }
+  //to get trash notes
+  getTrashService() {
+    let httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': this.token
+      })
+
+    }
+    return this.httpService.getService('notes/getTrashNotesList', true, httpOptions)
   }
 
 }

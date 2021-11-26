@@ -14,6 +14,7 @@ import { UpdateNotesComponent } from './Components/update-notes/update-notes.com
 // import { TakeNoteComponent } from './Components/take-note/take-note.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { ArchiveComponent } from './Components/archive/archive.component';
+import { TrashComponent } from './Components/trash/trash.component';
 
 const routes: Routes = [
   
@@ -31,7 +32,8 @@ const routes: Routes = [
   children:[
     {path:'notes', component:GetAllNotesComponent},
     {path:'reminders', component:GetRemindersNoteComponent},
-    {path:'archive', component:ArchiveComponent}
+    {path:'archive', component:ArchiveComponent},
+    {path:'trash', component:TrashComponent}
     // {path:'display-card', component:DisplayCardComponent},
   ]
 }

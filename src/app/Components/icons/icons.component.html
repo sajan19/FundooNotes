@@ -1,4 +1,8 @@
+
 <div class="container">
+    <div *ngIf="!isTrashComponent">
+
+    
     <button class="mat_icon first">
         <img src="../../../assets/note_icons/bell.svg" alt="">
     </button>
@@ -11,12 +15,39 @@
     <button class="mat_icon">
         <img src="../../../assets/note_icons/image.svg" alt="">
     </button>
-    <button (click)="archiveNote()" class="mat_icon">
+    <button *ngIf="!isArchive" (click)="archiveNote()" class="mat_icon">
         <img src="../../../assets/note_icons/archieve.svg" alt="">
     </button>
-    <button (click)="deleteNote()" class="mat_icon">
-        <img src="../../../assets/note_icons/more.svg" class="more_icon" alt="">
+    <button *ngIf="isArchive" (click)="archiveNote()" class="mat_icon">
+        <img src="../../../assets/note_icons/archieve.svg" alt="">
     </button>
+
+    <!-- <button > -->
+        <button class="mat_icon" mat-button [matMenuTriggerFor]="menu" class="btn-property">
+        <img src="../../../assets/note_icons/more.svg" class="more_icon btn-property" alt="">
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="getTrash()">Delete Note</button>  
+            <button mat-menu-item>Add label</button>  
+            <button mat-menu-item>Add drawing</button>
+            <button mat-menu-item>Make a copy</button>
+            <button mat-menu-item>Show checkboxes</button>
+        </mat-menu>
+    </button>
+    <!-- <div class="buttons">
+        <button mat-button [matMenuTriggerFor]="menu" class="btn-property">
+            <img src="../../../assets/icon/more.svg" alt="">
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="deleteNote()">Delete Note</button>
+                <button mat-menu-item>Add label</button>
+                <button mat-menu-item>Add drawing</button>
+                <button mat-menu-item>Make a copy</button>
+                <button mat-menu-item>Show checkboxes</button>
+            </mat-menu>
+        
+    </div> -->
+
+   
     <!-- <button class="mat_icon">
         <img src="../../../assets/note_icons/undo.svg" alt="">
     </button>
@@ -27,5 +58,14 @@
         Close
     </button> -->
 </div>
+    <div *ngIf="isTrashComponent"  fxLayout="row" >
+        <button class="buttons btn-property" matTooltip="Delete forever" (click)="deleteNote()">
+            <img class="icons" src="../../../assets/note_icons/deleteForever.svg" alt="">
+        </button>
 
+        <button class="buttons btn-property"  matTooltip="Restore">
+            <img class="icons" src="../../../assets/note_icons/restore.svg" alt="">
+        </button>
+    </div>
+</div>
 

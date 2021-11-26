@@ -9,9 +9,10 @@ import { DataServiceService } from 'src/app/Services/DataService/data-service.se
 })
 export class GetAllNotesComponent implements OnInit {
   parentMessage = "message from parent"
-NotesList=[]
+NotesList:any
   constructor(private noteService: NoteServiceService) { }
-  Notelist: any;
+  // Notelist: any;
+  // NotesList:any;
   note: any;
   ngOnInit(): void {
     this.getAllNotes()
@@ -27,18 +28,24 @@ NotesList=[]
   // }
   getAllNotes(){
     console.log("Get all notes Calling");
-    let notes = []
     // let item:any
     this.noteService.getAllNotesService().subscribe((response:any)=>{
       console.log('Message is present in getAllNotes',response);
-      this.NotesList = response.data.data
+      this.NotesList = response.data.data.reverse()
+      console.log("NoteList", this.NotesList);
+      // this.NotesList=this.NotesList.filter((noteData:any)=>{
+      //   return noteData.isDeleted === true && noteData.isArchive === false;
+      //  });
       // notes = response.data.data
-      this.NotesList.reverse()
-      console.log("notelist", this.NotesList);
+      // this.NotesList.reverse()
+      console.log("NoteList", this.NotesList);
     },err => {
       console.log(err)    
     })
   }
+
+
+
   receiveMessage($event: any) {
     console.log("Notes get Added and AutoRefresh",$event);
     this.getAllNotes()
