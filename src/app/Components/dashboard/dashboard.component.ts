@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,7 +12,7 @@ export class DashboardComponent implements OnInit {
   openDash:boolean = false;
  
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -19,6 +20,9 @@ export class DashboardComponent implements OnInit {
   openDashboard(){
     this.openDash =  !this.openDash;
   }
-  
+  logout() {
+    localStorage.removeItem('token');
+    this.router.navigateByUrl('/login');
+  }
 
 }
