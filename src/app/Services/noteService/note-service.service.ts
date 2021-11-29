@@ -126,4 +126,15 @@ token:any;
     return this.httpService.getService('notes/getTrashNotesList', true, httpOptions)
   }
 
+  changecolorservice(reqPayload:any){
+    let httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': this.token
+      })
+
+    }
+    return this.httpService.postService('notes/changesColorNotes',reqPayload,true,httpOptions)
+  }
 }
+

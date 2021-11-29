@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import { UpdateNotesComponent } from '../update-notes/update-notes.component';
+import { GetAllNotesComponent } from '../get-all-notes/get-all-notes.component';
+import { IconsComponent } from '../icons/icons.component';
 
 @Component({
   selector: 'app-display-card',
@@ -11,8 +13,6 @@ export class DisplayCardComponent implements OnInit {
   cards:any=Object;
   sentmsg:any;
   
- 
-  // @Input() childMessage: any;
   constructor(public dialog: MatDialog) {}
   // constructor() { }
 // @Input (property) DisplayCardComponent.NotesArrayList:any
@@ -22,21 +22,13 @@ export class DisplayCardComponent implements OnInit {
   ngOnInit(){
 
   }
-  // const dialogRef = this.dialog.open(UpdateNotesComponent, {
-  //   width: '250px',
-  //   data: {name: this.name, animal: this.animal},
-  // });
+
 openDialog(note:any) {
     const dialogRef = this.dialog.open(UpdateNotesComponent,{
-      data: note
-      
+      data: note   
     }
     );
 
-  //   dialogRef.afterClosed().subscribe(result => {
-  //     // console.log(`Dialog result: ${result}`);
-  //   });
-  // }
   dialogRef.afterClosed().subscribe(result => {
     this.displaytogetallnotes.emit(this.sentmsg)
     console.log(`Dialog result: ${result}`);
@@ -44,7 +36,7 @@ openDialog(note:any) {
   });
 }
 
-  receiveMessageFromDeleteNote($event: any) {
+    recieveFromIconsToDisplayCard($event: any) {
     console.log("recievedindisplay",$event);
     this.sentmsg = $event
     this.displaytogetallnotes.emit(this.sentmsg)

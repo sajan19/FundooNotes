@@ -4,7 +4,7 @@
      <div fxLayout="row wrap" fxLayoutGap="10px grid">
         <!-- <div fxFlex="25%" *ngFor= "let card of cards"> -->
         <div fxFlex="300px" *ngFor= "let note of NotesArrayList">
-            <mat-card class="mat_card">
+            <mat-card class="mat_card"  [style.background-color]=note.color>
                 <div> 
                     <button class="note_pin">
                         <img src="../../../assets/take_note/note_pin.svg" alt="">
@@ -20,7 +20,7 @@
                 </mat-card-content>
                 <div>
                     <!-- <div>{{note.id}}</div> -->
-                    <app-icons [noteCard]='note' (iconstodisplay)="receiveMessageFromDeleteNote($event)"></app-icons>
+                    <app-icons [noteCard]='note' (iconstodisplay)="recieveFromIconsToDisplayCard($event)"></app-icons>
                 </div>            
             </mat-card>
         </div>

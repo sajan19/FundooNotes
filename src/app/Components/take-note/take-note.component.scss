@@ -1,13 +1,13 @@
 .mat_card_1 {
-    top: 10%;
+    top: 50px;
     border: 1px solid black;
     position: absolute;
-    width: 44%;
-    left: 31%;
+    // width: 500px;
+    // left: 300px;
 }
-// .mat-card{
-//     max-width: 55%;
-// }
+// // .mat-card{
+// //     max-width: 55%;
+// // }
 
 .text {
     font-size: 20px;
@@ -38,11 +38,13 @@
     width: 92%;
 }
 .mat_card_2 {
-    top: 10%;
+    top: 50px;
+    // top: 10%;
     border: 1px solid black;
     position: absolute;
-    width: 44%;
-    left: 31%;
+    left: 363px;
+    // width: 44%;
+    // left: 31%;
 }
 .note_pin {
     /* margin: -4px 10px; */
@@ -53,11 +55,11 @@
     right: 0px;
 }
 .button{
-    top: 25%;
+    top: 145px;
     position: absolute;
-    //  background-color: red;
-    right: 27%;
+    right: 400px;
     background: none;
     border: none;
-    font-size: 15px;
+    font-size: 18px;
 }
+

@@ -65,39 +65,39 @@
     <mat-sidenav  #sidenav mode="side" [(opened)]="opened" fxLayout="column" fxLayoutAlign="start center"
         fxLayoutGap="20px">
 
-        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" class="hover">
+        <div routerLinkActive="active" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" class="hover">
             <button mat-icon-button class="btnPosition button-property">
                 <img src="../../../assets/side_nav/notes.svg" alt="">
             </button>
-            <p routerLink="/home/notes" class="navName">Notes</p>
+            <a routerLink="/home/notes" class="navName">Notes</a>
         </div>
 
-        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px"  class="hover">
+        <div routerLinkActive="active" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px"  class="hover">
             <button mat-icon-button class="btnPosition button-property">
                 <img src="../../../assets/side_nav/reminders.svg" alt="">
             </button>
-            <p class="navName">Reminders</p>
+            <a routerLink="/home/reminders" class="navName">Reminders</a>
         </div>
 
-        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" class="hover">
+        <div routerLinkActive="active"  fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" class="hover">
             <button mat-icon-button class="btnPosition button-property">
                 <img src="../../../assets/side_nav/edit_label.svg" alt="">
             </button>
-            <p class="navName">Edit labels</p>
+            <a class="navName">Edit labels</a>
         </div>
 
-        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px"  class="hover">
+        <div  routerLinkActive="active" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px"  class="hover">
             <button mat-icon-button class="btnPosition button-property">
                 <img src="../../../assets/side_nav/archive.svg" alt="">
             </button>
-            <p routerLink="/home/archive" class="navName">Archive</p>
+            <a routerLink="/home/archive" class="navName">Archive</a>
         </div>
 
-        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px"  class="hover">
+        <div  routerLinkActive="active"  fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px"  class="hover">
             <button routerLink="/home/trash" mat-icon-button class="btnPosition button-property">
                 <img src="../../../assets/side_nav/trash.svg" alt="">
             </button>
-            <p routerLink="/home/trash" class="navName">Trash</p>
+            <a routerLink="/home/trash" class="navName">Trash</a>
         </div>
          
     </mat-sidenav>

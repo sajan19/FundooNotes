@@ -1,7 +1,7 @@
 .mat_icon{
     margin: 0px 3px;
     border: none;
-    background-color: white;
+    background-color: transparent;
 }
 .first{
     margin-left: 0px;
@@ -41,7 +41,7 @@
 .button-icon {
     margin: 0px 10px;
     border: none;
-    background-color: white;
+    background-color: transparent;
 }
 
 .content_1 {
@@ -81,11 +81,25 @@
 .container{
     width: 100%;
 }
-
+.pop {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: white;
+    max-width: 170px;
+    margin-left: 5px;
+  }
 .btn-property{
     border: none;
     border-radius: 100%;
-    background-color: white;
+    background-color: transparent;
     padding:4px;
     // opacity: 0.5;
+}
+.color_box{
+    width: 50px;
+    background-color: cyan;
+    display: flex;
+    height: 100px;
+    padding: 0px;
 }
